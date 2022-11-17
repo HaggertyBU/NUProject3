@@ -1,4 +1,5 @@
 # Daily gamma exposure on market move
+### Explanations
 
 ### Options: 
 
@@ -43,7 +44,6 @@ There is another part for call option equal to intrinsic value plus extrinsic va
 depend on implied volatility and time decay.
 intrinsic value equal to share price minus stricke price
 
-![Long Call options](https://user-images.githubusercontent.com/69637182/202533839-2293ef0f-a940-44ca-8a41-18cbbb9efd1a.png)
 
 
 
