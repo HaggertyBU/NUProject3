@@ -5,7 +5,7 @@
 
 The option are contracts that give the bearer the right, not the obligation, to either buy or sell an amount of some underlying assets
 
-### There two types of call options:
+### There two types of an options:
 ### Call Options:
 call options are type of option that increases in value when a stock rises
 So, call option gives you the right, but not requirement to buy a stock at a pecific price or stricke price by sepecific date, at the option's expiration.
