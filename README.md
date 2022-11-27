@@ -2,7 +2,7 @@
 
 ## **Project Overview**
 
-### *Package Installations*
+### *Package Instalations*
 'pip install x' where 'x' is the package listed below:
 * 'python == 3.9.1'
 * 'yfinance'
