@@ -13,11 +13,11 @@
 * 'SVR == 0.5'
 * 'regressor 1.0.7'
 
-###  *Files Navigation*
+###  *Files Explorer*
 * 'DATA': Directory contains all original csv files
 * 'PLOTS':  Directory containing all images of plots created in Jupyter Notebook
 
-### "Purpose of Projects
+### *Project Goal*
 
 ### Conclusion 
 
