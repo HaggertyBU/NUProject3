@@ -16,6 +16,7 @@
 ###  *Files Explorer*
 * 'DATA': Directory contains all original csv files
 * 'PLOTS':  Directory containing all images of plots created in Jupyter Notebook
+* 'NUProject3.ipynb': Notebook containing the final project
 
 ### Option Basics
 
