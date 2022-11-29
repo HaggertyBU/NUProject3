@@ -43,15 +43,7 @@ As we see in the chart above, options with a sooner expiration (1W) have a steep
 
 Deltas are also impacted by the implied volatility of the underlying stock. As implied volatility goes up, the delta of the option increases (in absolute terms). That effect is illustrated in the chart below. 
 
-
-
-
-
-
-
-
-
-
+<img width="463" alt="image" src="https://user-images.githubusercontent.com/107219003/204430804-8e84b86e-b1ff-4fec-a4a0-1846d26f5a98.png">
 
 In the graph above, options with an Implied Volatility of 10, have a lower delta than options that have an Implied Volatility of 50.
 
@@ -61,12 +53,13 @@ Gamma is closely related to delta. Gamma is the rate of change in delta for ever
 For example, if an option has a delta of .40 and a gamma of .20, the first dollar move in the underlying asset will see the price of the option change by $0.40 ($40). The subsequent dollar move of the stock will see the price of the option change another $0.40 ($40) plus an additional $0.20 ($20). Therefore, a $2 move in stock price will result in a total net change of $1.00 ($100) in the option’s price.
 Gamma is higher for contracts closer to at-the-money and more sensitive to changes in the underlying asset price. The chart below illustrates Gamma compared to underlying price. 
 
+  ![image](https://user-images.githubusercontent.com/107219003/204430857-3efda7c5-7cce-4f75-9590-340166730dfa.png)
+
  
  Gamma risk is the concern that price changes in the underlying asset will have an adverse impact on the option premium. Gamma risk increases as options approach expiration because a small move in the underlying security will significantly impact pricing due to the lack of time remaining on the contract. The chart below illustrates the relationship between Gamma and time to option expiration. 
 
+ ![image](https://user-images.githubusercontent.com/107219003/204430892-165ba2b3-1d78-4bd5-b958-c4ee21f95728.png)
 
-
- 
 
 For this project, we will mainly focus on Delta and Gamma, but it is important to understand the effects that the rest of the Greeks have on pricing. 
 
