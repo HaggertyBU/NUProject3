@@ -35,6 +35,9 @@ Delta is the amount an option’s price would change based upon a $1 move in the
 Calls have a positive delta between 0 and 1, while puts have a negative delta between 0 and -1. Delta represents the number of relative shares you would own if you purchased an option at a specific delta. For example, if you buy a call option with a .50 delta that is essentially equivalent to buying 50 shares of stock, and vice versa with put options, -.50 delta is the same as shorting 50 shares of the underlying stock.
 Let’s say a stock priced at $100 has a $110 call option with a delta of .30 and costs $2.00. If the underlying stock moves up to $101, the option should now be worth $2.30. Owning 100 shares of the stock would have realized a gain of $100. The .30 delta option realized approximately 30 shares worth of value, or $30. Delta can also act as an approximation of the probability an option will finish in-the-money. A .30 delta has roughly a 30% chance of expiring in-the-money, or a 70% chance of expiring out-of-the-money.
 Delta is sensitive to time as well as how close it is to the money. Options that are further out in time, have a higher delta than options that have a shorter time to expiration. The chart below illustrates this. 
+
+ ![image](https://user-images.githubusercontent.com/107219003/204430538-e6430cf6-a928-47d4-a51d-1a8a8dd04acc.png)
+
  
 As we see in the chart above, options with a sooner expiration (1W) have a steeper slope, therefore less delta, than options that are further out in time (9M). 
 
