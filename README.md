@@ -109,22 +109,25 @@ For our model, we want to test what effect contango and backwardation play on vo
 
 Below is a chart that shows VIX term structure in contango. This is related to a lack of volatility in the markets.
 
+<img width="320" alt="image" src="https://user-images.githubusercontent.com/107219003/204431072-9f35d3e4-99a1-4fb6-a24d-a86f3cd2977c.png">
  
-
-
 In comparison, below is a chart of the VIX term structure in backwardation. This is related to an increase in volatility. 
 
- 
-
+ <img width="317" alt="image" src="https://user-images.githubusercontent.com/107219003/204431095-9c8d42f4-a81a-431d-8950-4a209cef8110.png">
 
 ### Project Background
+
+ <img width="468" alt="image" src="https://user-images.githubusercontent.com/107219003/204431130-a219cbfb-f74d-4d5e-9363-e0b46d43e09d.png">
 
  
 The above chart shows the relationship between dealer’s Gamma Exposure and the S&P500 daily change. The graph shows that as gamma decreases, volatility (SP500 change) increases. The opposite is also true, as gamma increases, volatility tends to decrease. From the graph above, orange dots represent days where the market was positive, and the blue dots indicate the market being negative. Days where gamma is higher, tend to lead to more positive days, while lower gamma tends to be more negative. 
 
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/107219003/204431176-f0261878-2c70-4a48-868c-8d73ebc329d4.png">
+
  
 The above chart is the return of the S&P500 returns in absolute terms. Since we are focused on volatility, we are uninterested on determining the directional move in the markets. This graph further illustrates that lower gamma leads to increased volatility. Due to what the above two graphs show we believe we can find a relationship between Actual Realized Volatility and Gamma Exposure. Our goal is to find the relationship, and then see if we can compare that to the Implied Volatility to gain a trading edge.
 
+ <img width="433" alt="image" src="https://user-images.githubusercontent.com/107219003/204431212-e916f368-a76d-416b-ae57-32807102c9e5.png">
  
 The above chart shows the history of implied volatility to realized volatility. As you can see, a majority of the time implied volatility exceeds the actual, realized volatility. This is due to there always being a need for “insurance” on underlying equity positioning. Because of this, we say that volatility trades as a premium. This premium is the spread between implied and realized volatility. From the charts, we see that selling volatility is a great strategy until it is not. The two major volatility events, 2008 Great Financial Crisis and the 2020 COVID-crash, were examples of when volatility sellers struggled mightily. From the chart above, the average spread between implied volatility and realized volatility is about 45 basis points (0.45%). 
 
@@ -132,23 +135,30 @@ The above chart shows the basis of our project. We want to create an implied vol
 
 ### Model Results
 
-The first model we ran, is a Random Forest Regression (RFR) model. We chose this model, because RFR models do a great job at explaining which variables are important in determining the predictive values of a model. We would then take those insights and try to build a better model from there. We ran through the modeling process and the RFR returned a score of 0.7554. This is a pretty good score for our first attempt. The model returned an RMSE of 0.00708.          
+The first model we ran, is a Random Forest Regression (RFR) model. We chose this model, because RFR models do a great job at explaining which variables are important in determining the predictive values of a model. We would then take those insights and try to build a better model from there. We ran through the modeling process and the RFR returned a score of 0.7554. This is a pretty good score for our first attempt. The model returned an RMSE of 0.00708.    
+
+<img width="436" alt="image" src="https://user-images.githubusercontent.com/107219003/204431263-1cdf1a88-03d5-4de0-95cf-5a80ebc1dedf.png">
+
 From the above chart we were able to make observation on the various features of our model that gave us predictive capabilities. The most predictive variable from our model was the previous close of the Volatility Index (VIX). The next most important variable is the Gamma Exposure of dealer positioning. This confirms are previous hypothesis stating that Gamma Exposure determines a large part of volatility. 
 
 Our next step in our modeling process was comparing our model’s implied volatility to the VIX as well as the actual realized volatility of the market. For this, we took our model’s volatility predictions and subtracted the absolute realized volatility of the market. We did this for the VIX’s implied volatility. From this we were able to find the difference, or spread, from the implied volatility and realized volatility. If implied volatility perfectly predicted realized volatility, the spread would equal 0. 
 
+ <img width="464" alt="image" src="https://user-images.githubusercontent.com/107219003/204431299-74db5f93-0507-4eef-b220-73f65178447c.png">
  
 The above chart shows the spread between our model’s implied volatility and actual realized volatility. The average spread between the two throughout this time period is about 0.483%. 
 
- 
+ <img width="468" alt="image" src="https://user-images.githubusercontent.com/107219003/204431338-84421bf6-e7e3-47a5-bd53-b4568585acdf.png">
+
 The above chart shows the spread between the VIX’s implied volatility and actual realized volatility. The average spread between the two throughout this time period is about 0.643%. 
 
 The two charts above show the relationship between our Model's predicted volatility vs the actual volatility of the markets and the relationship between the VIX's implied volatility vs the actual volatility of the markets. As discussed in the previous model above, there is usually a premium to volatility as realized volatility doesn't exceed the implied volatility. The difference in implied vs. realized is measured in a spread. The goal of this project is to minimize the spread between a predicted or implied volatility, and the actual realized volatility. These graphs show that our model was able to do just that. By the prediction stats, we see that the average spread between our model's implied volatility and realized volatility, is by about 48 basis points. This is compared to the VIX's average spread of about 64 basis points.
 
 From the charts above, we can see that our model has done a better job at modeling volatility compared to the VIX. From here we need to understand where our model differs from the VIX. 
 
- 
- 
+ <img width="468" alt="image" src="https://user-images.githubusercontent.com/107219003/204431388-6d966f30-4bd1-4ec7-82d4-e21a8136a6ba.png">
+
+ <img width="468" alt="image" src="https://user-images.githubusercontent.com/107219003/204431408-8f8f0cb9-74cd-4089-a53e-eaf62082a044.png">
+
 
 The two charts above show the relationship between our model's Implied Volatility and the VIX. When the line is below 0, our model believes that the VIX's implied volatility is too high, and one should short the volatility. When the line is above 0, that shows that our model believes volatility is too low, and one should be buying volatility. It is interesting that our model believes that the VIX is usually expensive as it spends a majority of its time below the 0 level. As we look at trends in the charts, we see that our model saw big advantages in the volatility markets both before and after the COVID crash in 2020. Looking at recent trends we see that shorting volatility is getting less and less attractive.
 
@@ -157,10 +167,11 @@ The two charts above show the relationship between our model's Implied Volatilit
 For the model below, we wanted to see what the effect of Top of Book Liquidity would have on volatility. We hypothesize that the less liquidity there is in markets, the more volatile the market is. Unfortunately, data for what we are trying to model here is very hard to obtain. Top of Book Liquidity data via the Chicago Mercantile Exchange (CME), was going to cost ~$19k if we wanted to capture the data that goes back to the May 31, 2011, start date in our other data collected above. Fortunately, the CME provides 2-year sample data we were able to use to at 
 least get a fraction of our time period. The results from that data are below. The chart below illustrates the liquidity of the S&P from the last 2 years. The wider ranges indicate a more liquid trading market. As one sees, the market has been less liquid over the last year. 
 
- 
+ <img width="460" alt="image" src="https://user-images.githubusercontent.com/107219003/204431436-d4bfef2b-369f-4c9e-a7e3-90bdfa66313a.png">
 
 To test out the impact that liquidity has on market volatility, we again ran a Random Forest Regression model on our data. The accuracy of the model wasn’t as great as the previous model, as we got a model score of 0.6957. The interesting insight we can take from this model is the results we received in the feature importances. Below we have a chart of the model’s feature importances. 
 
+ <img width="468" alt="image" src="https://user-images.githubusercontent.com/107219003/204431456-c08b5f36-2e20-4b64-a193-5a20064ad8c5.png">
  
 According to the model, the liquidity levels (TOB Rolling) was the most important factor in determining the volatility of the market.  
 
@@ -168,7 +179,7 @@ All in all, there are several interesting ideas to take away from this model. Th
 
 Once again, we wanted to see the features that were most predictive in determining volatility, so we decided to run a Random Forest Regression model. This model was our most accurate model as it had a score of 0.7746. The model had an RMSE of 0.00695. Below is a graph of our feature importances. 
 
- 
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/107219003/204431488-03c11b3a-501e-423d-858a-ed1249dadb3e.png"> 
 
 As the above chart shows, the spread in term structure (degree of contango/backwardation) plays a major role in determining the volatility of the market.
 
