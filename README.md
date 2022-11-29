@@ -175,7 +175,6 @@ Once again, we wanted to see the features that were most predictive in determini
  
 
 As the above chart shows, the spread in term structure (degree of contango/backwardation) plays a major role in determining the volatility of the market.
-![image](https://user-images.githubusercontent.com/107219003/204429835-54160bf8-2324-4ce1-b4e5-3809136aa3f8.png)
 
 ### Conclusion 
 
