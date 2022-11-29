@@ -191,6 +191,8 @@ As the above chart shows, the spread in term structure (degree of contango/backw
 2. Option Gamma Exposure : https://www.youtube.com/watch?v=jfTFMlotrjc
 3. Implied Volatility and Options : https://www.youtube.com/watch?v=Q3XAlfAyMGI
 4. Squeezemetrics: https://squeezemetrics.com/monitor/dix#gex
+5. CME Liquidity Tool: https://www.cmegroup.com/tools-information/cme-liquidity-tool.html?gclsrc=aw.ds&gclid=Cj0KCQiAyMKbBhD1ARIsANs7rEE7a8njpH7hWdkq5Bkge5j-rJSIXuBwO53_7fm-dsM0A7qWWW2oAjIaAiTwEALw_wcB&gclsrc=aw.ds
+6. VIX Term Structure: vixcentral.com
 
 ### Team Members
 1. Drew Haggerty
